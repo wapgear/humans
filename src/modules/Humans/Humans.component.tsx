@@ -8,9 +8,8 @@ export class HumansComponent extends React.Component<IHumanComponentProps, null>
   render() {
     return (
         <div className="humans">
-          Selected Human: {JSON.stringify(this.props.selectedHuman)}
           <Row gutter={24}>
-            <Col span={10}>
+            <Col sm={10} xs={24}>
               <HumansList
                 list={this.props.list}
                 searchList={this.props.searchList}
@@ -21,7 +20,7 @@ export class HumansComponent extends React.Component<IHumanComponentProps, null>
                 removeHuman={this.props.removeHuman}
               />
             </Col>
-            <Col span={14}>
+            <Col sm={14} xs={24}>
               <HumansDetails
                   initialValues={this.props.selectedHuman}
                   onSubmit={this.props.createOrUpdateHuman}

@@ -25,7 +25,7 @@ export class HumansDetails extends React.Component<IHumanDetailsProps, null> {
               render={({ handleSubmit, reset, submitting, pristine, values }) => (
                   <form onSubmit={handleSubmit} id="humans-details">
                     <Row>
-                      <Col span={20}>
+                      <Col sm={20} xs={24}>
                         <div className="humans-details__name">
                           <Field
                               name="name"
@@ -35,7 +35,7 @@ export class HumansDetails extends React.Component<IHumanDetailsProps, null> {
                           />
                         </div>
                       </Col>
-                      <Col span={4}>
+                      <Col sm={4} xs={24}>
                         <div className="humans-details__save">
                           <button type="submit" disabled={submitting || pristine}>
                             {values.id !== 0 ? "Update" : "Add"}

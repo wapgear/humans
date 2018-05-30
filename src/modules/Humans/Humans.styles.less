@@ -1,8 +1,21 @@
 .humans {
-  height: 100%;
+  height: ~"calc(100vh - 65px)";
+  padding: 16px;
+  overflow: hidden;
+  @media(min-width: 769px) {
+    padding: 32px;
+    .ant-row, [class*="col-"] {
+      height: 100%;
+    }
+  }
   &-list {
     border-right: 1px solid #7e7e7e;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    @media(max-width: 768px) {
+      height: 150px;
+    }
     &__search {
       padding: 8px;
       input {
@@ -46,17 +59,35 @@
     textarea, input {
       padding: 0 8px;
     }
+    &__name {
+      @media(max-width: 768px) {
+        padding: 0 8px;
+      }
+    }
     &__save {
       text-align: center;
       padding: 0 8px;
       button {
         height: 32px;
         width: 100%;
+        background: white;
+        border: 1px solid #dcdcdc;
+        cursor: pointer;
+        &:disabled {
+          cursor: not-allowed;
+          background: #e3e3e3;
+        }
+        @media(max-width: 768px) {
+          margin-top: 12px;
+        }
       }
     }
     &__notes {
       margin-top: 32px;
       padding-right: 8px;
+      @media(max-width: 768px) {
+        padding: 0 8px;
+      }
       textarea {
         width: 100%;
         min-height: 240px;

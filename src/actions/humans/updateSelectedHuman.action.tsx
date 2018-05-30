@@ -7,6 +7,6 @@ export const updateSelectedHumanAction:any = createAction(
 )
 
 export const updateSelectedHuman = value => {
-  history.replace(`/?user=${value}`)
+  history.replace(`/humans?user=${value}`)
   return updateSelectedHumanAction(value)
 }

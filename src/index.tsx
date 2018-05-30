@@ -23,7 +23,7 @@ ReactDOM.render(
       <Router history={history}>
         <Application>
           <Switch>
-            <Route exact path="/" component={Humans} />,
+            <Route exact path="/humans" component={Humans} />,
           </Switch>
         </Application>
       </Router>
